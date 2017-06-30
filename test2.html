@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>test2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            font-size: 62.5%;
+            font-family: "微软雅黑";
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/muwen.jpg");
+        }
+
+        #box {
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 35%;
+            text-align: center;
+            width: 100%;
+        }
+
+        #text {
+            position: absolute;
+            width: 100%;
+            font-size: 12px;
+            color: #fff;
+            bottom: 66.5%;
+            text-align: center;
+        }
+
+        .main {
+            position: relative;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .header img {
+            height: 100%;
+        }
+
+        .imgbg {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: -16%;
+            height: 95%;
+        }
+
+        .swiper-container {
+            position: absolute;
+            width: 53%;
+            height: 35%;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: -50%;
+            margin: auto;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        .myp {
+            text-indent: 2em;
+            line-height: 22px;
+        }
+
+        .swiper-container.photoBox {
+            position: absolute;
+            width: 53%;
+            height: 50%;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 10%;
+            margin: auto;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #pic1 {
+            position: absolute;
+            left: -45%;
+            right: 0;
+            bottom: 10%;
+            top: 75%;
+            margin: auto;
+            height: 20%;
+            z-index: 100;
+        }
+
+        #pic2 {
+            position: absolute;
+            left: -15%;
+            right: 0;
+            bottom: 10%;
+            top: 75%;
+            margin: auto;
+            height: 12%;
+        }
+
+        #pic3 {
+            position: absolute;
+            left: 0;
+            right: -30%;
+            bottom: 0;
+            top: -60%;
+            margin: auto;
+            height: 12%;
+
+        }
+
+        @media (min-width: 430px) {
+            #text {
+                width: 430px;
+            }
+
+        }
+
+        @media (min-width: 430px) {
+            #box {
+                width: 430px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<audio>
+    <source src="music/因你而在（完整版）.mp3" type="audio/mp3">
+</audio>
+<div id="box">
+    <header class="header">
+        <img src="img/photo1.png">
+        <p id="text">woaini</p>
+    </header>
+    <main class="main">
+        <img src="img/bg.png" class="imgbg" alt="">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><p class="myp">one</p></div>
+                <div class="swiper-slide"><p class="myp">two</p></div>
+            </div>
+        </div>
+        <div class="swiper-container photoBox">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/yq.jpg"></div>
+                <div class="swiper-slide"><img src="img/wh.jpg"></div>
+            </div>
+        </div>
+        <img src="img/coffee.png" id="pic1">
+        <img src="img/flower.png" id="pic2">
+        <img src="img/pen.png" id="pic3">
+
+    </main>
+</div>
+<script src="js/swiper-3.4.1.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 3000,
+        loop: true
+    });
+</script>
+</body>
+</html>
